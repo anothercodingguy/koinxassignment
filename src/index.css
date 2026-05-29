@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700;800&display=swap');
+@import "tailwindcss";
+
+:root {
+  --color-brand-darkBg: #F8FAFC;
+  --color-brand-cardDark: #FFFFFF;
+  --color-brand-cardLight: #F1F5F9;
+  --color-brand-borderDark: #E2E8F0;
+  --color-brand-textMuted: #64748B;
+  --color-text-primary: #0F172A;
+  --color-bg-opacity: rgba(255, 255, 255, 0.85);
+  --color-border-opacity: rgba(226, 232, 240, 0.8);
+}
+
+.dark {
+  --color-brand-darkBg: #090D16;
+  --color-brand-cardDark: #111827;
+  --color-brand-cardLight: #1F2937;
+  --color-brand-borderDark: #1F2A44;
+  --color-brand-textMuted: #9CA3AF;
+  --color-text-primary: #FFFFFF;
+  --color-bg-opacity: rgba(21, 29, 48, 0.75);
+  --color-border-opacity: rgba(31, 42, 68, 0.5);
+}
+
+@theme {
+  --color-brand-darkBg: var(--color-brand-darkBg);
+  --color-brand-cardDark: var(--color-brand-cardDark);
+  --color-brand-cardLight: var(--color-brand-cardLight);
+  --color-brand-borderDark: var(--color-brand-borderDark);
+  --color-brand-textMuted: var(--color-brand-textMuted);
+  --color-text-primary: var(--color-text-primary);
+  
+  --color-brand-primaryBlue: #2563EB;
+  --color-brand-neonGreen: #10B981;
+  --color-brand-neonRed: #EF4444;
+  
+  --font-sans: 'Outfit', 'Inter', sans-serif;
+  --animate-shimmer: shimmer 1.5s infinite linear;
+  --animate-glow: glow 2s infinite ease-in-out;
+
+  @keyframes shimmer {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(100%);
+    }
+  }
+
+  @keyframes glow {
+    0%, 100% {
+      box-shadow: 0 0 15px rgba(37, 99, 235, 0.15);
+    }
+    50% {
+      box-shadow: 0 0 25px rgba(37, 99, 235, 0.3);
+    }
+  }
+}
+
+@utility shimmer-bg {
+  background: linear-gradient(90deg, var(--color-brand-cardDark) 25%, var(--color-brand-borderDark) 50%, var(--color-brand-cardDark) 75%);
+  background-size: 200% 100%;
+}
+
+@utility glass-panel {
+  background: var(--color-bg-opacity);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--color-border-opacity);
+  transition: all 0.3s ease;
+
+  &:hover {
+    border-color: rgba(37, 99, 235, 0.4);
+    box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.05);
+  }
+}
+
+body {
+  background-color: var(--color-brand-darkBg);
+  color: var(--color-text-primary);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+/* Custom premium scrollbar styling */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-brand-darkBg);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-brand-borderDark);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #2563EB;
+}
