@@ -2,11 +2,9 @@
 
 A responsive, high-fidelity React application built with TypeScript, Vite, and Tailwind CSS (v4) to simulate and calculate **Tax-Loss Harvesting** benefits for cryptocurrency portfolios.
 
-## 🚀 Live Demo & Deployment
-- Deployed URL: **[Provide your deployment link here, e.g., Vercel or Netlify]**
-- GitHub Repository: **[Provide your GitHub link here]**
+## 🚀 Live Demo
+- Deployed URL: https://suyashkoinxassignment.vercel.app/
 
----
 
 ## ✨ Features
 1. **Interactive Simulated Calculator**: Compare **Pre-Harvesting** (Current) and **After Harvesting** (Simulated) capital gains side-by-side.
